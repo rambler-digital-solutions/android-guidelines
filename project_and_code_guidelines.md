@@ -135,7 +135,6 @@ See more info [here](https://source.android.com/source/code-style.html#fully-qua
 
 Fields should be defined at the __top of the file__ and they should follow the naming rules listed below.
 
-* Private, non-static field names start with __m__.
 * Private, static field names start with __s__.
 * Other fields start with a lower case letter.
 * Static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
@@ -386,7 +385,7 @@ When using one of these components, you __must__ define the keys as a `static fi
 | -----------------  | ----------------- |
 | SharedPreferences  | `PREF_`             |
 | Bundle             | `BUNDLE_`           |
-| Fragment Arguments | `ARGUMENT_`         |
+| Fragment Arguments | `ARG_`         |
 | Intent Extra       | `EXTRA_`            |
 | Intent Action      | `ACTION_`           |
 
@@ -398,7 +397,7 @@ Example:
 // Note the value of the field is the same as the name to avoid duplication issues
 static final String PREF_EMAIL = "PREF_EMAIL";
 static final String BUNDLE_AGE = "BUNDLE_AGE";
-static final String ARGUMENT_USER_ID = "ARGUMENT_USER_ID";
+static final String ARG_USER_ID = "ARG_USER_ID";
 
 // Intent-related items use full package name as value
 static final String EXTRA_SURNAME = "com.myapp.extras.EXTRA_SURNAME";
@@ -427,7 +426,7 @@ For Fragments it is named `newInstance()` and handles the creation of the Fragme
 public static UserFragment newInstance(User user) {
 	UserFragment fragment = new UserFragment;
 	Bundle args = new Bundle();
-	args.putParcelable(ARGUMENT_USER, user);
+	args.putParcelable(ARG_USER, user);
 	fragment.setArguments(args)
 	return fragment;
 }
