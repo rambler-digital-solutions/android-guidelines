@@ -244,6 +244,15 @@ Annotations applying to fields should be listed __on the same line__, unless the
 @Nullable @Mock DataManager mDataManager;
 ```
 
+Fields with annotations is recommended to separate with blank lines
+```java
+@JsonProperty(value = "first_name")
+private String firstName;
+
+@JsonProperty(value = "last_name")
+private String lastName;
+```
+
 ### 2.2.7 Limit variable scope
 
 _The scope of local variables should be kept to a minimum (Effective Java Item 29). By doing so, you increase the readability and maintainability of your code and reduce the likelihood of error. Each variable should be declared in the innermost block that encloses all uses of the variable._
