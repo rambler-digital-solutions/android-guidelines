@@ -522,6 +522,23 @@ public Observable<Location> syncLocations() {
 }
 ```
 
+### 2.2.17 Enum classes
+
+After each comma that follows an enum constant, a line break is optional. Additional blank lines (usually just one) are also allowed. This is one possibility:
+```java
+private enum Answer {
+    YES {
+        @Override public String toString() {
+        return "yes";
+        }
+    },
+
+    NO,
+    MAYBE
+}
+```
+Since enum classes are classes, all other rules for formatting classes apply.
+
 ## 2.3 XML style rules
 
 ### 2.3.1 Use self closing tags
