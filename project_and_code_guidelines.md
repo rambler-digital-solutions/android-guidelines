@@ -244,7 +244,8 @@ Annotations applying to fields should be listed __on the same line__, unless the
 @Nullable @Mock DataManager mDataManager;
 ```
 
-Fields with annotations is recommended to separate with blank lines
+It is recommended to separate annotated fields with blank lines
+
 ```java
 @JsonProperty(value = "first_name")
 private String firstName;
