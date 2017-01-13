@@ -146,9 +146,9 @@ public class MyClass {
     public static final int SOME_CONSTANT = 42;
     public int publicField;
     private static MyClass sSingleton;
-    int mPackagePrivate;
-    private int mPrivate;
-    protected int mProtected;
+    int packagePrivate;
+    private int privateField;
+    protected int protectedField;
 }
 ```
 
